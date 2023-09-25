@@ -1,0 +1,52 @@
+﻿<Window x:Class="WpfAutoOlio.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAutoOlio"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="544" Width="800">
+    <Grid>
+        <Button x:Name="btnAuto1" Content="Tallenna Auto1" HorizontalAlignment="Left" Margin="141,166,0,0" VerticalAlignment="Top" Width="170" Height="39" Click="btnAuto1_Click" TabIndex="4"/>
+        <Button x:Name="btnAuto1Info" Content="Näytä Auto1 Info" HorizontalAlignment="Left" Margin="141,220,0,0" VerticalAlignment="Top" Width="170" Height="39" Click="btnAuto1Info_Click" TabIndex="5"/>
+        <TextBox x:Name="txtMaxSpeed" HorizontalAlignment="Left" Margin="303,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="97" TabIndex="3" Height="27"/>
+        <TextBox x:Name="txtModel" HorizontalAlignment="Left" Margin="303,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="218" TabIndex="2"/>
+        <TextBox x:Name="txtColor" HorizontalAlignment="Left" Margin="303,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="218" TabIndex="1"/>
+        <Label x:Name="lblColor" Content="Color" HorizontalAlignment="Left" Margin="137,20,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblModel" Content="Model" HorizontalAlignment="Left" Margin="137,43,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblMaxSpeed" Content="Max Speed" HorizontalAlignment="Left" Margin="137,66,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnStart" Content="Start" HorizontalAlignment="Left" Margin="141,277,0,0" VerticalAlignment="Top" Height="49" Width="45" FontWeight="Bold" Click="btnStart_Click" TabIndex="6"/>
+        <Button x:Name="btnStop" Content="Stop" HorizontalAlignment="Left" Margin="266,277,0,0" VerticalAlignment="Top" Height="49" Width="45" FontWeight="Bold" Click="btnStop_Click" TabIndex="7"/>
+        <Button x:Name="btnIndicator" Content="" HorizontalAlignment="Left" Margin="190,277,0,0" VerticalAlignment="Top" Height="49" Width="72" FontWeight="Bold"/>
+        <Button x:Name="btnAuto2" Content="Tallenna Auto2" HorizontalAlignment="Left" Margin="351,166,0,0" VerticalAlignment="Top" Width="170" Height="39" Click="btnAuto2_Click" TabIndex="8"/>
+        <Button x:Name="btnAuto2Info" Content="Näytä Auto2 Info" HorizontalAlignment="Left" Margin="351,220,0,0" VerticalAlignment="Top" Width="170" Height="39" Click="btnAuto2Info_Click" TabIndex="9"/>
+        <Button x:Name="btnStart2" Content="Start2" HorizontalAlignment="Left" Margin="351,277,0,0" VerticalAlignment="Top" Height="49" Width="45" FontWeight="Bold" Click="btnStart_Click" TabIndex="10"/>
+        <Button x:Name="btnStop2" Content="Stop2" HorizontalAlignment="Left" Margin="476,277,0,0" VerticalAlignment="Top" Height="49" Width="45" FontWeight="Bold" Click="btnStop_Click" TabIndex="11"/>
+        <Button x:Name="btnIndicator2" Content="" HorizontalAlignment="Left" Margin="400,277,0,0" VerticalAlignment="Top" Height="49" Width="72" FontWeight="Bold"/>
+        <RadioButton x:Name="rbManual" Content="Manual" HorizontalAlignment="Left" Margin="190,379,0,0" VerticalAlignment="Top" GroupName="GearType" Checked="GearButtons_Checked" TabIndex="12"/>
+        <RadioButton x:Name="rbRobotic" Content="Robotic" HorizontalAlignment="Left" Margin="190,412,0,0" VerticalAlignment="Top" GroupName="GearType" Checked="GearButtons_Checked" TabIndex="14"/>
+        <RadioButton x:Name="rbAutomatic" Content="Automatic" HorizontalAlignment="Left" Margin="190,396,0,0" VerticalAlignment="Top" GroupName="GearType" Checked="GearButtons_Checked" TabIndex="13"/>
+        <RadioButton x:Name="rbDiesel" Content="Diesel" HorizontalAlignment="Left" Margin="408,376,0,0" VerticalAlignment="Top" GroupName="EngineType" Checked="EngineButtons_Checked" TabIndex="15"/>
+        <RadioButton x:Name="rbElectric" Content="Electric" HorizontalAlignment="Left" Margin="408,412,0,0" VerticalAlignment="Top" GroupName="EngineType" Checked="EngineButtons_Checked" TabIndex="17"/>
+        <RadioButton x:Name="rbGasoline" Content="Gasoline" HorizontalAlignment="Left" Margin="408,393,0,0" VerticalAlignment="Top" GroupName="EngineType" Checked="EngineButtons_Checked" TabIndex="16"/>
+        <TextBox x:Name="txtAverageFuelConsumption" HorizontalAlignment="Left" Margin="303,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="218"/>
+        <TextBox x:Name="txtElectricVehicleRange" HorizontalAlignment="Left" Margin="303,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="218"/>
+        <Label x:Name="lblAverageFuelConsumption" Content="Average Fuel Consumption" HorizontalAlignment="Left" Margin="137,93,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblElectricVehicleRange" Content="Electric Vehicle Range" HorizontalAlignment="Left" Margin="137,135,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtHorsepower" HorizontalAlignment="Left" Margin="303,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="218"/>
+        <Label x:Name="lblHorsepower" Content="Horsepower" HorizontalAlignment="Left" Margin="137,113,0,0" VerticalAlignment="Top" Width="147" Height="25"/>
+        <Label x:Name="lblMaxSpeedInfo" Content="" HorizontalAlignment="Left" Margin="405,65,0,0" VerticalAlignment="Top" Width="266" Height="27"/>
+        <TextBox x:Name="txtGearCount" HorizontalAlignment="Left" Margin="288,399,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="34"/>
+        <Label x:Name="lblGearCountInfo" Content="" HorizontalAlignment="Left" Margin="332,394,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="35">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.363"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+
+    </Grid>
+</Window>
